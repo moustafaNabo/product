@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>أبناء نابو - صفحة خصومات</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <style>
+    :root{
+      --main:#0ea5a0;
+      --accent:#ff6363;
+      --glass: rgba(255,255,255,0.08);
+    }
+    body{
+      background: linear-gradient(180deg,#f3f7f6,#eef7f6);
+      font-family: 'Segoe UI', Tahoma, Arial, sans-serif;
+      color:#08303a;
+      -webkit-font-smoothing:antialiased;
+    }
+    .card-hero{
+      background: linear-gradient(120deg, rgba(6,30,34,0.9), rgba(6,90,86,0.85));
+      color: #fff;
+      border-radius: 18px;
+      padding: 28px;
+      box-shadow: 0 12px 40px rgba(6,30,34,0.25);
+      overflow:hidden;
+    }
+    .company-logo{
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      border: 4px solid #fff;
+      object-fit: cover;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+      margin-bottom: 15px;
+    }
+    .badge-code{
+      display:inline-block;
+      background: linear-gradient(90deg,var(--accent), #ff8a8a);
+      padding:12px 22px;
+      font-weight:800;
+      border-radius:12px;
+      letter-spacing:2px;
+      box-shadow:0 8px 24px rgba(255,99,99,0.18);
+      font-size:1.25rem;
+    }
+    .product-thumb{
+      width:100%;
+      max-width:320px;
+      border-radius:12px;
+      box-shadow: 0 18px 40px rgba(2,99,99,0.25);
+      border: 6px solid rgba(255,255,255,0.05);
+      background:#fff;
+    }
+    .glass{
+      background: var(--glass);
+      padding:14px;
+      border-radius:12px;
+    }
+    .small-muted{color: rgba(255,255,255,0.85)}
+    footer{margin-top:28px;text-align:center;color:#666;font-size:0.9rem}
+    @media(max-width:767px){
+      .card-hero{padding:18px}
+      .badge-code{font-size:1rem;padding:10px 14px}
+      .company-logo{width:80px;height:80px;margin-bottom:10px;}
+    }
+  </style>
+</head>
+<body>
+
+  <main class="container py-5" style="background-image: url(3.jpg);">
+    <div class="row g-4 align-items-center">
+      <div class="col-12 col-lg-7">
+        <div class="card-hero text-center text-md-end">
+
+          <!-- صورة الشركة -->
+          <div class="text-center mb-3">
+            <img src="3.jpg" alt="شعار أبناء نابو" class="company-logo">
+          </div>
+
+          <div class="d-flex justify-content-between align-items-start mb-3 flex-wrap">
+            <div>
+              <h1 class="h3 mb-1 fw-bold">أبناء نابو التجارية</h1>
+              <p class="small-muted mb-2">أحسن العروض — جودة مضمونة — توصيل سريع</p>
+            </div>
+            <div class="text-end d-none d-md-block">
+              <!-- لوغو مصغر إضافي (اختياري) -->
+              <div style="width:84px;height:84px;border-radius:12px;background:#fff;display:flex;align-items:center;justify-content:center;">
+                <img src="logo.jpg" alt="logo" style="max-width:78px;max-height:78px;">
+              </div>
+            </div>
+          </div>
+
+          <div class="row gy-3">
+            <div class="col-12 col-md-7">
+              <div class="glass mb-3">
+                <div class="d-flex align-items-center justify-content-between flex-wrap gap-2">
+                  <div>
+                    <div class="badge-code" id="promoCode">جاري التحميل...</div>
+                    <div class="mt-2 small-muted">استخدم الكود عند الطلب للحصول على خصم فوري 🎁</div>
+                  </div>
+
+                  <div class="text-md-end">
+                    <div class="mb-2 small text-white-50">الكود الجديد يتغير في كل زيارة — فرصة كل مرة 🎲</div>
+                    <div class="d-flex gap-2">
+                      <button class="btn btn-light" id="copyBtn"><i class="fa fa-copy"></i> نسخ الكود</button>
+                      <button class="btn btn-outline-light" id="regenBtn" title="تجديد الكود"><i class="fa fa-sync"></i> كود جديد</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="bg-white rounded-3 p-3">
+                <label class="form-label small mb-1">اسم المنتج (سيظهر في رسالة الواتساب):</label>
+                <input id="productName" class="form-control mb-2" placeholder="مثال: ماكينة VGR V-700" value="ماكينة VGR V-700">
+                <div class="d-flex gap-2">
+                  <a id="whatsappBtn" class="btn btn-success flex-grow-1" target="_blank"><i class="fa fa-whatsapp"></i> اطلب عبر واتساب الآن</a>
+                  <button id="shareBtn" class="btn btn-outline-primary"><i class="fa fa-share-alt"></i> شارك</button>
+                </div>
+                <div class="mt-3 small text-muted">يمكنك نسخ الكود أو فتح واتساب مباشرة بالرسالة الجاهزة التي تتضمن الكود واسم المنتج.</div>
+              </div>
+
+              <div class="mt-3 d-flex gap-2 flex-wrap">
+                <div class="p-2 bg-white rounded-3 text-muted small">📍 العنوان: نجع حمادى – امتداد مسجد اللواء – بجوار مول البراق</div>
+                <div class="p-2 bg-white rounded-3 text-muted small">🛍️ متاح جملة وقطاعي</div>
+                <div class="p-2 bg-white rounded-3 text-muted small">📞 تواصل: 01004495190</div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-5 text-center">
+              <img id="productImg" src="1.jpg" alt="product" class="product-thumb mb-3">
+              <h5 class="mb-1" id="productTitle">ماكينة إزالة الشعر VGR V-700</h5>
+              <p class="small text-white-50">ماكينة إزالة الشعر VGR V-700 هي الاختيار الأمثل لكل سيدة تبحث عن نعومة وأناقة دائمة ✨</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="col-12 col-lg-5">
+        <div class="p-4 rounded-3" style="background:#fff;border-radius:16px;box-shadow:0 12px 34px rgba(4,21,21,0.06)">
+          <h4 class="mb-2 fw-bold">لماذا تزور صفحتنا الآن؟</h4>
+          <ul class="small text-muted mb-3">
+            <li>كود خصم يتغير في كل زيارة — فرصة جديدة في كل مرة.</li>
+            <li>رسالة واتساب جاهزة بالخصم واسم المنتج لتسريع الطلب.</li>
+            <li>منتجات مضمونة وجودة وأسعار منافسة.</li>
+          </ul>
+
+          <div class="mb-3">
+            <label class="form-label small">قائمة أكواد محفوظة (تعديل سريع في الكود):</label>
+            <pre id="codesList" style="background:#f8f9fb;padding:10px;border-radius:8px;margin:0;font-size:0.9rem;color:#222;white-space:pre-wrap;"></pre>
+          </div>
+
+          <div class="d-grid gap-2">
+            <button id="toggleGen" class="btn btn-outline-secondary">توليد كود دائمًا (مفعّل)</button>
+            <a href="https://chat.whatsapp.com/EauEHupmaCU3jvVS88uEPU" target="_blank" class="btn btn-dark">انضم لجروب الواتساب</a>
+          </div>
+
+
+
+          <footer class="mt-4">
+            <small>© أبناء نابو التجارية</small>
+          </footer>
+        </div>
+      </div>
+    </div>
+  </main>
+
+<script>
+  const phoneNumber = '201004495190';
+  const fixedCodes = ["NABO2025","SAVE15","NABO50","OFFER30","NABO10","RAMADAN25","WINTER20"];
+  let alwaysGenerate = false;
+
+  const promoEl = document.getElementById('promoCode');
+  const copyBtn = document.getElementById('copyBtn');
+  const regenBtn = document.getElementById('regenBtn');
+  const whatsappBtn = document.getElementById('whatsappBtn');
+  const productNameInput = document.getElementById('productName');
+  const codesListEl = document.getElementById('codesList');
+  const toggleGenBtn = document.getElementById('toggleGen');
+  const shareBtn = document.getElementById('shareBtn');
+
+  function showFixedCodes(){ codesListEl.innerText = fixedCodes.join('  •  '); }
+  showFixedCodes();
+
+  function generateRandomCode(){
+    const rand = Math.floor(1000 + Math.random()*9000);
+    return `NABO-${rand}`;
+  }
+
+  function pickCode(){
+    if(alwaysGenerate) return generateRandomCode();
+    const useFixed = Math.random() < 0.5;
+    return useFixed ? fixedCodes[Math.floor(Math.random()*fixedCodes.length)] : generateRandomCode();
+  }
+
+  let CURRENT_CODE = pickCode();
+  promoEl.innerText = CURRENT_CODE;
+
+  function updateWhatsAppLink(){
+    const product = productNameInput.value.trim() || 'المنتج غير محدد';
+    const msg = `مرحبا 👋، أريد طلب المنتج التالي:\n📦 ${product}\n🎟️ كود الخصم: ${CURRENT_CODE}\n\nالرجاء تزويدي بالتفاصيل وطريقة الشراء.`;
+    whatsappBtn.href = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(msg)}`;
+  }
+  updateWhatsAppLink();
+
+  copyBtn.addEventListener('click', async () => {
+    try{
+      await navigator.clipboard.writeText(CURRENT_CODE);
+      copyBtn.innerHTML = '✅ تم النسخ';
+      setTimeout(()=> copyBtn.innerHTML = '<i class="fa fa-copy"></i> نسخ الكود', 1500);
+    }catch(e){ alert('تعذر النسخ تلقائيًا. يرجى نسخه يدويًا: ' + CURRENT_CODE); }
+  });
+
+  regenBtn.addEventListener('click', () => {
+    CURRENT_CODE = pickCode();
+    promoEl.innerText = CURRENT_CODE;
+    updateWhatsAppLink();
+  });
+
+  productNameInput.addEventListener('input', updateWhatsAppLink);
+
+  toggleGenBtn.addEventListener('click', () => {
+    alwaysGenerate = !alwaysGenerate;
+    toggleGenBtn.innerText = alwaysGenerate ? 'توليد كود دائمًا (مفعّل)' : 'توليد كود دائمًا (معطل)';
+    if(alwaysGenerate){
+      CURRENT_CODE = generateRandomCode();
+      promoEl.innerText = CURRENT_CODE;
+      updateWhatsAppLink();
+    }
+  });
+
+  shareBtn.addEventListener('click', async () => {
+    const shareText = `فرصة عرض! استخدم الكود ${CURRENT_CODE} على موقع أبناء نابو لطلب ${productNameInput.value || 'هذا المنتج'}.`;
+    const pageUrl = location.href;
+    if(navigator.share){
+      try{ await navigator.share({title:'عرض أبناء نابو', text: shareText, url: pageUrl}); }catch(e){}
+    } else {
+      try{
+        await navigator.clipboard.writeText(`${shareText}\n${pageUrl}`);
+        alert('تم نسخ نص المشاركة. يمكنك لصقه في أي مكان.');
+      }catch(e){ prompt('انسخ نص المشاركة يدوياً:', `${shareText}\n${pageUrl}`); }
+    }
+  });
+
+  window.addEventListener('load', () => updateWhatsAppLink());
+</script>
+
+</body>
+</html>
